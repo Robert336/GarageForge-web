@@ -1,0 +1,14 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "close-order": "error",
+    "void-style": ["error", { "style": "omit" }],
+    "class-pattern": ["error", { "pattern": "kebab-case" }],
+    "id-pattern": ["error", { "pattern": "kebab-case" }],
+    "require-sri": "off",
+    "no-trailing-whitespace": "error"
+  },
+  "elements": [
+    "html5"
+  ]
+}

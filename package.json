@@ -1,0 +1,28 @@
+{
+  "name": "garageforge-web",
+  "version": "1.0.0",
+  "description": "Static marketing website for GarageForge custom metalwork services",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "npx serve src -l 3000",
+    "lint:html": "html-validate \"src/**/*.html\"",
+    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "build": "cp -R src dist",
+    "clean": "rm -rf dist",
+    "deploy": "npm run build"
+  },
+  "keywords": ["metalwork", "custom", "garage", "static-site"],
+  "author": "GarageForge",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "html-validate": "^8.7.4",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/GarageForge-web.git"
+  },
+  "homepage": "https://username.github.io/GarageForge-web"
+}
