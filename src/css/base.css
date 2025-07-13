@@ -9,31 +9,32 @@
 
 /* CSS Custom Properties */
 :root {
-  /* Colors */
-  --color-primary: #2c3e50;
-  --color-primary-light: #34495e;
-  --color-primary-dark: #1a252f;
-  --color-secondary: #e67e22;
-  --color-secondary-light: #f39c12;
-  --color-secondary-dark: #d35400;
+  /* Colors - GarageForge Brand Palette */
+  --color-primary: #3A0CA3;        /* Deep Indigo */
+  --color-primary-light: #5A2FC2;
+  --color-primary-dark: #2A0873;
+  --color-secondary: #F72585;      /* Vibrant Orange */
+  --color-secondary-light: #FF4DA6;
+  --color-secondary-dark: #D1006B;
+  --color-accent: #4CC9F0;         /* Accent Green/Blue */
   
-  --color-neutral-100: #ffffff;
-  --color-neutral-200: #f8f9fa;
-  --color-neutral-300: #e9ecef;
-  --color-neutral-400: #ced4da;
-  --color-neutral-500: #6c757d;
-  --color-neutral-600: #495057;
-  --color-neutral-700: #343a40;
-  --color-neutral-800: #212529;
-  --color-neutral-900: #000000;
+  --color-neutral-100: #F5F5F5;    /* Soft White */
+  --color-neutral-200: #EEEEEE;
+  --color-neutral-300: #E0E0E0;
+  --color-neutral-400: #BDBDBD;
+  --color-neutral-500: #9E9E9E;
+  --color-neutral-600: #757575;
+  --color-neutral-700: #4C4C4C;    /* Cool Gray */
+  --color-neutral-800: #424242;
+  --color-neutral-900: #212121;
   
   --color-success: #28a745;
   --color-warning: #ffc107;
   --color-error: #dc3545;
   
-  /* Typography */
-  --font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-family-heading: 'Georgia', 'Times New Roman', serif;
+  /* Typography - GarageForge Brand Fonts */
+  --font-family-primary: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-heading: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
   --font-size-xs: 0.75rem;    /* 12px */
   --font-size-sm: 0.875rem;   /* 14px */
@@ -102,8 +103,8 @@ body {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
-  color: var(--color-neutral-800);
-  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-700);
+  background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
