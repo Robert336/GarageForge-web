@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GarageForge 3D printing portfolio - View our custom prototypes, replacement parts, educational models, and creative projects. Quality work from Schomberg, Ontario.">
+    <meta name="keywords" content="3D printing portfolio, custom prototypes, replacement parts, 3D printed projects, Schomberg Ontario, GTA maker">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Portfolio - GarageForge 3D Printing Projects">
+    <meta property="og:description" content="Explore our portfolio of custom 3D printed prototypes, replacement parts, and creative projects serving the Greater Toronto Area.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://garageforge.com/portfolio.html">
+    
+    <title>Portfolio - GarageForge 3D Printing Projects</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages/portfolio.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo" aria-label="GarageForge home">
+                    <span class="nav__logo-text">GarageForge</span>
+                </a>
+                
+                <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+                
+                <ul class="nav__menu">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link nav__link--active" aria-current="page">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero hero--portfolio" aria-labelledby="portfolio-hero-title">
+            <div class="hero__container">
+                <h1 id="portfolio-hero-title" class="hero__title">Our Work<br>Speaks for Itself</h1>
+                <p class="hero__subtitle">Explore our portfolio of custom prototypes, replacement parts, and creative projects that have helped bring ideas to life</p>
+            </div>
+        </section>
+
+        <section class="portfolio-filter" aria-labelledby="filter-title">
+            <div class="container">
+                <h2 id="filter-title" class="sr-only">Project Categories</h2>
+                <div class="filter__buttons">
+                    <button class="filter__btn filter__btn--active" data-filter="all">All Projects</button>
+                    <button class="filter__btn" data-filter="prototypes">Prototypes</button>
+                    <button class="filter__btn" data-filter="parts">Replacement Parts</button>
+                    <button class="filter__btn" data-filter="creative">Creative Projects</button>
+                    <button class="filter__btn" data-filter="educational">Educational</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <h2 id="gallery-title" class="sr-only">Project Gallery</h2>
+                <div class="gallery__grid">
+                    
+                    <!-- Prototype Projects -->
+                    <article class="project" data-category="prototypes">
+                        <div class="project__image">
+                            <div class="placeholder-image">
+                                <span class="placeholder-text">Startup Device Prototype</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">IoT Device Housing</h3>
+                            <p class="project__category">Prototype</p>
+                            <p class="project__description">Custom housing for a startup's IoT sensor device. Rapid iteration through 3 design versions in 48 hours.</p>
+                            <div class="project__specs">
+                                <span class="spec">PLA</span>
+                                <span class="spec">0.2mm Layer</span>
+                                <span class="spec">24hr Turnaround</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="prototypes">
+                        <div class="project__image">
+                            <div class="placeholder-image">
+                                <span class="placeholder-text">Medical Device Component</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Medical Device Component</h3>
+                            <p class="project__category">Prototype</p>
+                            <p class="project__description">Biocompatible prototype for medical device testing. Precision printing for critical tolerances.</p>
+                            <div class="project__specs">
+                                <span class="spec">PETG</span>
+                                <span class="spec">0.1mm Layer</span>
+                                <span class="spec">Food Safe</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Replacement Parts -->
+                    <article class="project" data-category="parts">
+                        <div class="project__image">
+                            <div class="placeholder-image">
+                                <span class="placeholder-text">Automotive Bracket</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Automotive Bracket</h3>
+                            <p class="project__category">Replacement Part</p>
+                            <p class="project__description">Custom bracket for vintage car restoration. Reverse engineered from damaged original part.</p>
+                            <div class="project__specs">
+                                <span class="spec">ABS</span>
+                                <span class="spec">High Strength</span>
+                                <span class="spec">Reverse Engineered</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="parts">
+                        <div class="project__image">
+                            <div class="placeholder-image">
+                                <span class="placeholder-text">Industrial Gear</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Industrial Gear</h3>
+                            <p class="project__category">Replacement Part</p>
+                            <p class="project__description">Critical gear replacement for manufacturing equipment. Reduced downtime from weeks to hours.</p>
+                            <div class="project__specs">
+                                <span class="spec">ABS</span>
+                                <span class="spec">Urgent Request</span>
+                                <span class="spec">12hr Delivery</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Creative Projects -->
+                    <article class="project" data-category="creative">
+                        <div class="project__image">
+                            <div class="placeholder-image">
+                                <span class="placeholder-text">Architectural Model</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Architectural Scale Model</h3>
+                            <p class="project__category">Creative Project</p>
+                            <p class="project__description">Detailed scale model for architectural presentation. Multiple materials and finishes.</p>
+                            <div class="project__specs">
+                                <span class="spec">Multi-Material</span>
+                                <span class="spec">Fine Detail</span>
+                                <span class="spec">Custom Finish</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="creative">
+                        <div class="project__image">
+                            <div class="placeholder-image">
+                                <span class="placeholder-text">Art Installation Piece</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Art Installation Component</h3>
+                            <p class="project__category">Creative Project</p>
+                            <p class="project__description">Large-scale art installation components. Collaboration with local artist for gallery exhibition.</p>
+                            <div class="project__specs">
+                                <span class="spec">PLA</span>
+                                <span class="spec">Large Scale</span>
+                                <span class="spec">Artist Collaboration</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Educational Projects -->
+                    <article class="project" data-category="educational">
+                        <div class="project__image">
+                            <div class="placeholder-image">
+                                <span class="placeholder-text">Molecular Model</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Molecular Structure Models</h3>
+                            <p class="project__category">Educational</p>
+                            <p class="project__description">Chemistry teaching aids for local high school. Set of 20 different molecular structures.</p>
+                            <div class="project__specs">
+                                <span class="spec">PLA</span>
+                                <span class="spec">Educational Discount</span>
+                                <span class="spec">Bulk Order</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="educational">
+                        <div class="project__image">
+                            <div class="placeholder-image">
+                                <span class="placeholder-text">Historical Artifact Replica</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Historical Artifact Replicas</h3>
+                            <p class="project__category">Educational</p>
+                            <p class="project__description">Museum-quality replicas for hands-on history education. Safe for student handling.</p>
+                            <div class="project__specs">
+                                <span class="spec">PLA</span>
+                                <span class="spec">Museum Quality</span>
+                                <span class="spec">Educational Use</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project" data-category="prototypes">
+                        <div class="project__image">
+                            <div class="placeholder-image">
+                                <span class="placeholder-text">Consumer Product Prototype</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Consumer Product Prototype</h3>
+                            <p class="project__category">Prototype</p>
+                            <p class="project__description">Kitchen gadget prototype for product testing and investor presentations. Multiple iterations.</p>
+                            <div class="project__specs">
+                                <span class="spec">PETG</span>
+                                <span class="spec">Food Safe</span>
+                                <span class="spec">Investor Ready</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 id="testimonials-title" class="section__title">What Our Clients Say</h2>
+                <div class="testimonials__grid">
+                    <blockquote class="testimonial">
+                        <p class="testimonial__quote">"GarageForge saved our startup weeks of development time. Their rapid prototyping service let us iterate quickly and get to market faster."</p>
+                        <cite class="testimonial__author">
+                            <strong>Sarah Chen</strong>
+                            <span>Founder, TechStart Inc.</span>
+                        </cite>
+                    </blockquote>
+                    
+                    <blockquote class="testimonial">
+                        <p class="testimonial__quote">"When our production line went down, GarageForge had the replacement part printed and delivered within 12 hours. Incredible service!"</p>
+                        <cite class="testimonial__author">
+                            <strong>Mike Rodriguez</strong>
+                            <span>Operations Manager, AutoFix Pro</span>
+                        </cite>
+                    </blockquote>
+                    
+                    <blockquote class="testimonial">
+                        <p class="testimonial__quote">"The educational models they created for our chemistry class are perfect. Students can finally see and touch molecular structures."</p>
+                        <cite class="testimonial__author">
+                            <strong>Dr. Emily Watson</strong>
+                            <span>Chemistry Teacher, Maple High School</span>
+                        </cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta__content">
+                    <h2 id="cta-title" class="cta__title">Ready to Start Your Project?</h2>
+                    <p class="cta__description">Join the growing list of satisfied clients who trust GarageForge for their 3D printing needs.</p>
+                    <div class="cta__actions">
+                        <a href="contact.html" class="btn btn--primary">Get Your Quote</a>
+                        <a href="services.html" class="btn btn--secondary">View Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">GarageForge</h3>
+                    <p class="footer__text">On-demand 3D printing services in Schomberg, Ontario</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                        <li><a href="portfolio.html" class="footer__link">Portfolio</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contact Info</h4>
+                    <p class="footer__text">Email: info@garageforge.com</p>
+                    <p class="footer__text">Phone: (555) 123-4567</p>
+                    <p class="footer__text">Serving the Greater Toronto Area</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 GarageForge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

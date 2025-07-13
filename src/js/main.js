@@ -54,6 +54,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Portfolio filter functionality
+    const filterButtons = document.querySelectorAll('.filter__btn');
+    const projects = document.querySelectorAll('.project');
+    
+    if (filterButtons.length > 0 && projects.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('filter__btn--active'));
+                this.classList.add('filter__btn--active');
+                
+                // Filter projects
+                projects.forEach(project => {
+                    const category = project.getAttribute('data-category');
+                    
+                    if (filter === 'all' || category === filter) {
+                        project.classList.remove('hidden');
+                    } else {
+                        project.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    }
+    
     // Basic form validation (for future contact forms)
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
