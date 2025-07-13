@@ -79,9 +79,17 @@ This project can be served statically without a build step, but an npm script he
    - Minify CSS (build step) before deployment if size exceeds 50 KB.
 
 ## Workflow for Agentic Coding Tools
-1. **Tasks** should be granular and self-contained (e.g. “Implement Services page layout”).
+1. **Tasks** should be granular and self-contained (e.g. "Implement Services page layout").
 2. **Branch Naming**: `feature/<slug>` or `fix/<slug>`.
-3. **Commit Messages**: imperative mood ("Add hero section"), reference issue when available.
+3. **Commit Messages**: Follow conventional commit format with industry standards:
+   - `feat:` for new features
+   - `fix:` for bug fixes
+   - `docs:` for documentation changes
+   - `style:` for formatting/styling changes
+   - `refactor:` for code restructuring
+   - `test:` for adding tests
+   - Include detailed body explaining what was implemented
+   - **REQUIRED**: Always commit changes immediately after completing a task
 4. **Pull Requests** must include:
    - Screenshot or GIF of the change.
    - Lighthouse report (if visual/key page).
