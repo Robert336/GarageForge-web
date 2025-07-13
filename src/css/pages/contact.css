@@ -12,6 +12,204 @@
   background-color: var(--color-neutral-100);
 }
 
+/* STL Upload Section */
+.stl-upload-section {
+  padding: var(--space-4xl) 0;
+  background-color: #ffffff;
+}
+
+.upload-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.file-upload-area {
+  border: 3px dashed var(--color-neutral-400);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-3xl);
+  text-align: center;
+  background-color: var(--color-neutral-100);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  margin: var(--space-2xl) 0;
+}
+
+.file-upload-area:hover,
+.file-upload-area.dragover {
+  border-color: var(--color-accent);
+  background-color: rgba(76, 201, 240, 0.1);
+}
+
+.upload__icon {
+  font-size: var(--font-size-5xl);
+  margin-bottom: var(--space-lg);
+  color: var(--color-neutral-600);
+}
+
+.upload__title {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.upload__subtitle {
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.upload__input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.upload__info {
+  margin-top: var(--space-lg);
+}
+
+.upload__note {
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-sm);
+}
+
+/* File Info Display */
+.file-info {
+  background-color: var(--color-neutral-100);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius-md);
+  margin: var(--space-lg) 0;
+}
+
+.file-info__title {
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.file-info__details {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.file-detail {
+  background-color: #ffffff;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-700);
+}
+
+/* Quote Calculator */
+.quote-calculator {
+  background-color: var(--color-neutral-100);
+  padding: var(--space-2xl);
+  border-radius: var(--border-radius-lg);
+  margin: var(--space-2xl) 0;
+}
+
+.calculator__title {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.calculator__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.calculator__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator__label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.calculator__select,
+.calculator__input {
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--color-neutral-300);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  background-color: #ffffff;
+  transition: border-color var(--transition-fast);
+}
+
+.calculator__select:focus,
+.calculator__input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.quote-display {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: #ffffff;
+  padding: var(--space-xl);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+.quote__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-lg);
+  color: #ffffff;
+}
+
+.quote__breakdown {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+.quote__line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-size-lg);
+}
+
+.quote__total {
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  padding-top: var(--space-sm);
+  margin-top: var(--space-md);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.quote__note {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.quote__actions .btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.quote__actions .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
 .options__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
