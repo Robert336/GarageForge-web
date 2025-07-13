@@ -81,6 +81,135 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // STL Upload and Quote Calculator functionality
+    const fileUploadArea = document.getElementById('file-upload-area');
+    const fileInput = document.getElementById('stl-file-input');
+    const fileInfo = document.getElementById('file-info');
+    const quoteCalculator = document.getElementById('quote-calculator');
+    const quoteDisplay = document.getElementById('quote-display');
+    
+    if (fileUploadArea && fileInput) {
+        // File upload handling
+        fileUploadArea.addEventListener('click', () => fileInput.click());
+        
+        fileUploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.add('dragover');
+        });
+        
+        fileUploadArea.addEventListener('dragleave', () => {
+            fileUploadArea.classList.remove('dragover');
+        });
+        
+        fileUploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFileUpload(files[0]);
+            }
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileUpload(e.target.files[0]);
+            }
+        });
+        
+        function handleFileUpload(file) {
+            if (!file.name.toLowerCase().endsWith('.stl')) {
+                alert('Please upload an STL file.');
+                return;
+            }
+            
+            if (file.size > 50 * 1024 * 1024) { // 50MB limit
+                alert('File size must be under 50MB.');
+                return;
+            }
+            
+            // Display file info
+            document.getElementById('file-name').textContent = file.name;
+            document.getElementById('file-size').textContent = formatFileSize(file.size);
+            fileInfo.style.display = 'block';
+            quoteCalculator.style.display = 'block';
+            
+            // Store file size for calculations
+            window.uploadedFileSize = file.size;
+            
+            // Trigger quote calculation if options are selected
+            calculateQuote();
+        }
+        
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+    }
+    
+    // Quote calculator functionality
+    const materialSelect = document.getElementById('material-select');
+    const qualitySelect = document.getElementById('quality-select');
+    const quantityInput = document.getElementById('quantity-input');
+    const rushCheckbox = document.getElementById('rush-checkbox');
+    
+    if (materialSelect && qualitySelect && quantityInput && rushCheckbox) {
+        [materialSelect, qualitySelect, quantityInput, rushCheckbox].forEach(element => {
+            element.addEventListener('change', calculateQuote);
+        });
+        
+        function calculateQuote() {
+            if (!window.uploadedFileSize || !materialSelect.value || !qualitySelect.value) {
+                if (quoteDisplay) quoteDisplay.style.display = 'none';
+                return;
+            }
+            
+            // Estimate weight based on file size (rough approximation)
+            // This is a simplified calculation - real implementation would analyze STL geometry
+            const estimatedWeight = Math.max(10, Math.round(window.uploadedFileSize / 10000)); // Very rough estimate
+            
+            const materialPrice = parseFloat(materialSelect.options[materialSelect.selectedIndex].dataset.price);
+            const qualityMultiplier = parseFloat(qualitySelect.options[qualitySelect.selectedIndex].dataset.multiplier);
+            const quantity = parseInt(quantityInput.value) || 1;
+            const isRush = rushCheckbox.checked;
+            
+            // Calculate costs
+            const baseCost = estimatedWeight * materialPrice;
+            const qualityAdjustedCost = baseCost * qualityMultiplier;
+            const quantityCost = qualityAdjustedCost * quantity;
+            const rushMultiplier = isRush ? 1.5 : 1;
+            const totalCost = quantityCost * rushMultiplier;
+            const rushCost = isRush ? quantityCost * 0.5 : 0;
+            
+            // Update display
+            document.getElementById('estimated-weight').textContent = estimatedWeight + ' grams';
+            document.getElementById('material-cost').textContent = '$' + baseCost.toFixed(2);
+            document.getElementById('quality-adjustment').textContent = '$' + (qualityAdjustedCost - baseCost).toFixed(2);
+            document.getElementById('quantity-display').textContent = '×' + quantity;
+            document.getElementById('total-estimate').textContent = '$' + totalCost.toFixed(2);
+            
+            const rushLine = document.getElementById('rush-line');
+            if (isRush) {
+                document.getElementById('rush-cost').textContent = '+$' + rushCost.toFixed(2);
+                rushLine.style.display = 'flex';
+            } else {
+                rushLine.style.display = 'none';
+            }
+            
+            quoteDisplay.style.display = 'block';
+        }
+    }
+    
+    // Scroll to contact form function
+    window.scrollToContactForm = function() {
+        const contactForm = document.getElementById('form-title');
+        if (contactForm) {
+            contactForm.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+    
     // Basic form validation (for future contact forms)
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {

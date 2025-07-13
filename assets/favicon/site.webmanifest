@@ -1,0 +1,22 @@
+{
+    "name": "GarageForge - 3D Printing Services",
+    "short_name": "GarageForge",
+    "description": "On-demand 3D printing services in Schomberg, Ontario. Custom prototypes, replacement parts, and creative projects.",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#3A0CA3",
+    "background_color": "#F5F5F5",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+}
