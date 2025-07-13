@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact GarageForge for your 3D printing needs. Get instant STL quotes, request custom projects, or reach out for consultation. Serving Schomberg, Ontario and the GTA.">
+    <meta name="keywords" content="contact GarageForge, 3D printing quote, STL upload, custom 3D printing, Schomberg Ontario contact">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Contact GarageForge - Get Your 3D Printing Quote">
+    <meta property="og:description" content="Contact GarageForge for fast, affordable 3D printing services. Upload STL files for instant quotes or reach out for custom project consultation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://garageforge.com/contact.html">
+    
+    <title>Contact GarageForge - Get Your 3D Printing Quote | Schomberg, Ontario</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo" aria-label="GarageForge home">
+                    <span class="nav__logo-text">GarageForge</span>
+                </a>
+                
+                <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+                
+                <ul class="nav__menu">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link nav__link--active" aria-current="page">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero hero--contact" aria-labelledby="contact-hero-title">
+            <div class="hero__container">
+                <h1 id="contact-hero-title" class="hero__title">Get Your Project<br>Started Today</h1>
+                <p class="hero__subtitle">Ready to bring your ideas to life? Contact us for instant STL quotes, custom project consultation, or any questions about our 3D printing services</p>
+            </div>
+        </section>
+
+        <section class="contact-options" aria-labelledby="options-title">
+            <div class="container">
+                <h2 id="options-title" class="section__title">How Can We Help?</h2>
+                <div class="options__grid">
+                    <article class="option-card">
+                        <div class="option__icon">⚡</div>
+                        <h3 class="option__title">Instant STL Quote</h3>
+                        <p class="option__description">Upload your STL file and get an immediate quote based on size, material, and print time.</p>
+                        <div class="option__features">
+                            <span class="feature">Automated pricing</span>
+                            <span class="feature">24/7 available</span>
+                            <span class="feature">No obligation</span>
+                        </div>
+                        <div class="option__cta">
+                            <a href="#stl-upload" class="btn btn--primary">Upload STL File</a>
+                        </div>
+                    </article>
+
+                    <article class="option-card">
+                        <div class="option__icon">🎯</div>
+                        <h3 class="option__title">Custom Project</h3>
+                        <p class="option__description">Need design help, have complex requirements, or want to discuss your project? Let's talk.</p>
+                        <div class="option__features">
+                            <span class="feature">Free consultation</span>
+                            <span class="feature">Design assistance</span>
+                            <span class="feature">Project planning</span>
+                        </div>
+                        <div class="option__cta">
+                            <a href="#contact-form" class="btn btn--primary">Start Discussion</a>
+                        </div>
+                    </article>
+
+                    <article class="option-card">
+                        <div class="option__icon">🏃‍♂️</div>
+                        <h3 class="option__title">Rush Order</h3>
+                        <p class="option__description">Need it urgently? We offer expedited services for critical parts and time-sensitive projects.</p>
+                        <div class="option__features">
+                            <span class="feature">Same-day service</span>
+                            <span class="feature">Priority handling</span>
+                            <span class="feature">Direct communication</span>
+                        </div>
+                        <div class="option__cta">
+                            <a href="tel:+15551234567" class="btn btn--secondary">Call Now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- STL Upload & Quote Calculator Section -->
+        <section class="stl-upload-section" id="stl-upload" aria-labelledby="stl-title">
+            <div class="container">
+                <div class="upload-container">
+                    <h2 id="stl-title" class="section__title">STL Upload & Instant Quote</h2>
+                    <p class="section__subtitle">Upload your STL file and get an immediate price estimate</p>
+                    
+                    <div class="file-upload-area" id="file-upload-area">
+                        <div class="upload__icon">📁</div>
+                        <h3 class="upload__title">Drop your STL file here</h3>
+                        <p class="upload__subtitle">or click to browse your files</p>
+                        <input type="file" id="stl-file-input" accept=".stl" class="upload__input" aria-label="Upload STL file">
+                        <div class="upload__info">
+                            <p class="upload__note">Supported: .STL files up to 50MB</p>
+                        </div>
+                    </div>
+                    
+                    <div class="file-info" id="file-info" style="display: none;">
+                        <h4 class="file-info__title">File Details</h4>
+                        <div class="file-info__details">
+                            <span class="file-detail" id="file-name"></span>
+                            <span class="file-detail" id="file-size"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-calculator" id="quote-calculator" style="display: none;">
+                        <h3 class="calculator__title">Calculate Your Quote</h3>
+                        <div class="calculator__grid">
+                            <div class="calculator__group">
+                                <label for="material-select" class="calculator__label">Material</label>
+                                <select id="material-select" class="calculator__select">
+                                    <option value="">Select Material</option>
+                                    <option value="pla" data-price="0.05">PLA - $0.05/gram</option>
+                                    <option value="petg" data-price="0.07">PETG - $0.07/gram</option>
+                                    <option value="abs" data-price="0.06">ABS - $0.06/gram</option>
+                                    <option value="tpu" data-price="0.12">TPU - $0.12/gram</option>
+                                </select>
+                            </div>
+                            <div class="calculator__group">
+                                <label for="quality-select" class="calculator__label">Print Quality</label>
+                                <select id="quality-select" class="calculator__select">
+                                    <option value="">Select Quality</option>
+                                    <option value="draft" data-multiplier="0.8">Draft (0.3mm)</option>
+                                    <option value="standard" data-multiplier="1.0">Standard (0.2mm)</option>
+                                    <option value="fine" data-multiplier="1.4">Fine (0.1mm)</option>
+                                </select>
+                            </div>
+                            <div class="calculator__group">
+                                <label for="quantity-input" class="calculator__label">Quantity</label>
+                                <input type="number" id="quantity-input" min="1" max="100" value="1" class="calculator__input">
+                            </div>
+                            <div class="calculator__group">
+                                <label for="rush-checkbox" class="calculator__label">
+                                    <input type="checkbox" id="rush-checkbox"> Rush Order (+50%)
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="quote-display" id="quote-display" style="display: none;">
+                            <h3 class="quote__title">Estimated Quote</h3>
+                            <div class="quote__breakdown">
+                                <div class="quote__line">
+                                    <span>Estimated Weight:</span>
+                                    <span id="estimated-weight">-- grams</span>
+                                </div>
+                                <div class="quote__line">
+                                    <span>Material Cost:</span>
+                                    <span id="material-cost">$0.00</span>
+                                </div>
+                                <div class="quote__line">
+                                    <span>Quality Adjustment:</span>
+                                    <span id="quality-adjustment">$0.00</span>
+                                </div>
+                                <div class="quote__line">
+                                    <span>Quantity:</span>
+                                    <span id="quantity-display">×1</span>
+                                </div>
+                                <div class="quote__line" id="rush-line" style="display: none;">
+                                    <span>Rush Order:</span>
+                                    <span id="rush-cost">+$0.00</span>
+                                </div>
+                                <div class="quote__total">
+                                    <span>Total Estimate:</span>
+                                    <span id="total-estimate">$0.00</span>
+                                </div>
+                            </div>
+                            <p class="quote__note">*Estimate based on file size. Final price confirmed after detailed analysis (±15% accuracy)</p>
+                            <div class="quote__actions">
+                                <button class="btn btn--primary" onclick="scrollToContactForm()">Request Official Quote</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section" aria-labelledby="form-title">
+            <div class="container">
+                <div class="form__wrapper">
+                    <div class="form__content">
+                        <h2 id="form-title" class="section__title">Send Us a Message</h2>
+                        <p class="section__subtitle">Tell us about your project and we'll get back to you within 24 hours</p>
+                        
+                        <form class="contact-form" id="contact-form" action="#" method="POST">
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="name" class="form__label">Full Name *</label>
+                                    <input type="text" id="name" name="name" class="form__input" required>
+                                </div>
+                                <div class="form__group">
+                                    <label for="email" class="form__label">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form__input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="phone" class="form__label">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form__input">
+                                </div>
+                                <div class="form__group">
+                                    <label for="project-type" class="form__label">Project Type</label>
+                                    <select id="project-type" name="project-type" class="form__select">
+                                        <option value="">Select project type</option>
+                                        <option value="prototype">Custom Prototype</option>
+                                        <option value="replacement">Replacement Part</option>
+                                        <option value="creative">Creative Project</option>
+                                        <option value="educational">Educational Model</option>
+                                        <option value="bulk">Bulk Order</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="timeline" class="form__label">Timeline</label>
+                                <select id="timeline" name="timeline" class="form__select">
+                                    <option value="">When do you need this?</option>
+                                    <option value="asap">ASAP (Rush order)</option>
+                                    <option value="24-48h">24-48 hours</option>
+                                    <option value="1-week">Within a week</option>
+                                    <option value="flexible">Flexible timeline</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="message" class="form__label">Project Details *</label>
+                                <textarea id="message" name="message" class="form__textarea" rows="6" required placeholder="Tell us about your project: dimensions, material preferences, quantity, special requirements, etc."></textarea>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="file-upload" class="form__label">Attach Files (STL, Images, Drawings)</label>
+                                <div class="file-upload">
+                                    <input type="file" id="file-upload" name="files" class="file-upload__input" multiple accept=".stl,.jpg,.jpeg,.png,.pdf,.dwg">
+                                    <label for="file-upload" class="file-upload__label">
+                                        <span class="file-upload__icon">📎</span>
+                                        <span class="file-upload__text">Choose files or drag and drop</span>
+                                    </label>
+                                </div>
+                                <small class="form__help">Supported formats: STL, JPG, PNG, PDF, DWG (Max 10MB per file)</small>
+                            </div>
+                            
+                            <div class="form__actions">
+                                <button type="submit" class="btn btn--primary btn--large">Send Message</button>
+                                <p class="form__note">We'll respond within 24 hours with a detailed quote and timeline</p>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3 class="contact-info__title">Get In Touch</h3>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">📧</div>
+                            <div class="contact__details">
+                                <strong>Email</strong>
+                                <a href="mailto:info@garageforge.com">info@garageforge.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">📱</div>
+                            <div class="contact__details">
+                                <strong>Phone</strong>
+                                <a href="tel:+15551234567">(555) 123-4567</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">📍</div>
+                            <div class="contact__details">
+                                <strong>Location</strong>
+                                <span>Schomberg, Ontario<br>Serving the Greater Toronto Area</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">⏰</div>
+                            <div class="contact__details">
+                                <strong>Response Time</strong>
+                                <span>Within 24 hours<br>Rush orders: Same day</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stl-upload-info">
+                            <h4 class="stl-upload__title" id="stl-upload">Quick STL Upload</h4>
+                            <p class="stl-upload__description">For fastest quotes, email your STL files directly to:</p>
+                            <a href="mailto:quotes@garageforge.com" class="stl-upload__email">quotes@garageforge.com</a>
+                            <p class="stl-upload__note">Include material preferences and quantity for accurate pricing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title" class="section__title">Frequently Asked Questions</h2>
+                <div class="faq__grid">
+                    <article class="faq__item">
+                        <h3 class="faq__question">How quickly can you complete my project?</h3>
+                        <p class="faq__answer">Most projects are completed within 24-48 hours. Rush orders can often be done the same day. Complex projects may take longer, but we'll give you an accurate timeline upfront.</p>
+                    </article>
+                    
+                    <article class="faq__item">
+                        <h3 class="faq__question">What file formats do you accept?</h3>
+                        <p class="faq__answer">We primarily work with STL files for 3D printing. We also accept OBJ, PLY, and 3MF formats. For design consultation, we can work with images, sketches, or existing parts.</p>
+                    </article>
+                    
+                    <article class="faq__item">
+                        <h3 class="faq__question">Do you offer design services?</h3>
+                        <p class="faq__answer">Yes! We can help with design modifications, optimization for 3D printing, and even create designs from scratch based on your requirements. Design consultation is included with custom projects.</p>
+                    </article>
+                    
+                    <article class="faq__item">
+                        <h3 class="faq__question">What are your payment options?</h3>
+                        <p class="faq__answer">We accept cash, e-transfer, and all major credit cards. Payment is typically due upon completion, though we may request a deposit for large or custom projects.</p>
+                    </article>
+                    
+                    <article class="faq__item">
+                        <h3 class="faq__question">Can you deliver to my location?</h3>
+                        <p class="faq__answer">We offer pickup in Schomberg and can arrange delivery throughout the GTA. Delivery fees depend on location and order size. Many clients find pickup convenient and cost-effective.</p>
+                    </article>
+                    
+                    <article class="faq__item">
+                        <h3 class="faq__question">What if I'm not satisfied with the result?</h3>
+                        <p class="faq__answer">Your satisfaction is our priority. We'll work with you to make it right, whether that means adjustments, reprints, or finding an alternative solution. We stand behind our work.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">GarageForge</h3>
+                    <p class="footer__text">On-demand 3D printing services in Schomberg, Ontario</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                        <li><a href="portfolio.html" class="footer__link">Portfolio</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contact Info</h4>
+                    <p class="footer__text">Email: info@garageforge.com</p>
+                    <p class="footer__text">Phone: (555) 123-4567</p>
+                    <p class="footer__text">Serving the Greater Toronto Area</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 GarageForge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
