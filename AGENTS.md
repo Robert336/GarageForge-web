@@ -57,10 +57,10 @@ This project can be served statically without a build step, but an npm script he
    - All images must have descriptive `alt` text.
    - Form fields must include explicit `<label>` elements.
 2. **CSS**
-   - Two-space indentation.
    - Adopt **BEM** class naming (`block__element--modifier`).
    - Leverage CSS Custom Properties in `:root` for colors, fonts, spacing.
    - Prefer Flexbox and Grid over legacy layout techniques.
+   - ALWAYS refer to images stored in the `/docs/` folder to inform your implementation of styles.
 3. **JavaScript (rarely used)**
    - Place scripts at the end of `<body>` or use `defer`.
    - Keep ES6+ syntax.
@@ -100,10 +100,10 @@ This project can be served statically without a build step, but an npm script he
 
 ## Roadmap
 1. **Scaffold** directory structure & basic files (index.html, base.css).
-2. **Header & Footer** components across all pages.
 4. **Responsive Tuning** & **Accessibility Audit**.
+5. **Analytics Integration** (use something lightweight and free)
 5. **Performance Optimization** (image compression, minify CSS).
-6. **Launch** on GitHub Pages & announce.
+6. **Launch**
 
 ## References
 - MDN Web Docs (HTML/CSS/JS)
