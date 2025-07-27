@@ -7,7 +7,7 @@ A static marketing website for GarageForge, a small business offering custom met
 1. Clean, semantic markup that boosts SEO and accessibility.
 2. Responsive, mobile-first design that looks great on all common breakpoints.
 3. Fast page loads (lightweight assets, optimized images, minimal JS).
-4. Easy deployment via GitHub Pages.
+4. Easy deployment
 
 ## Deliverables
 - Multi-page site (Home, About, Services, Portfolio, Contact).
@@ -100,13 +100,11 @@ This project can be served statically without a build step, but an npm script he
    - View on mobile (Chrome dev tools) and one desktop width ≥ 1024 px.
 
 ## Deployment
-- Automatic via GitHub Actions on push to `main`, deploying `src/` (or `dist/` if build step added) to the `gh-pages` branch.
-- Confirm production URL after each deploy and update README badges.
+
 
 ## Roadmap
 1. **Scaffold** directory structure & basic files (index.html, base.css).
 2. **Header & Footer** components across all pages.
-3. **Individual Pages**: About → Services → Portfolio → Contact.
 4. **Responsive Tuning** & **Accessibility Audit**.
 5. **Performance Optimization** (image compression, minify CSS).
 6. **Launch** on GitHub Pages & announce.
