@@ -21,10 +21,6 @@ A static marketing website for GarageForge, a small business offering custom met
 / (repo root)
 ├── src/              # Source files served in development
 │   ├── index.html
-│   ├── about.html
-│   ├── services.html
-│   ├── portfolio.html
-│   ├── contact.html
 │   ├── css/
 │   │   ├── base.css   # Reset + root variables
 │   │   ├── layout.css # Grid/Flex layouts & utility classes
