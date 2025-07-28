@@ -1,0 +1,67 @@
+/**
+ * GarageForge Base Styles
+ * Reset + root variables
+ */
+
+/* CSS Reset and base styles will go here */
+/* Root variables for colors, fonts, spacing will be defined here */
+
+:root {
+    /* Colors from BUSINESS.md */
+    --color-dark-text: #000000;
+    --color-primary-orange: #FF9500;
+    --color-secondary-blue: #3A72FF;
+    --color-dark-neutral: #323232;
+    --color-accent: #4CF07D;
+    
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    
+    /* Spacing, breakpoints, and other design tokens to be added */
+} 
+
+/* CSS Reset and base styles will go here */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    
+}
+/* Root variables for colors, fonts, spacing will be defined here */
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading, 'Montserrat', sans-serif);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+a {
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration: none;
+    color: var(--color-dark-text);
+}
+
+a:hover {
+    text-decoration: underline;
+}

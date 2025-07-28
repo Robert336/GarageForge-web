@@ -3,7 +3,7 @@
   "rules": {
     "close-order": "error",
     "void-style": ["error", { "style": "omit" }],
-    "class-pattern": ["error", { "pattern": "kebab-case" }],
+    "class-pattern": ["error", { "pattern": "^[a-z]([a-z0-9-]*[a-z0-9])?(__[a-z]([a-z0-9-]*[a-z0-9])?)?(--[a-z]([a-z0-9-]*[a-z0-9])?)?$" }],
     "id-pattern": ["error", { "pattern": "kebab-case" }],
     "require-sri": "off",
     "no-trailing-whitespace": "error"
