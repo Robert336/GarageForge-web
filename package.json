@@ -11,7 +11,7 @@
     "clean": "rm -rf dist",
     "deploy": "npm run build"
   },
-  "keywords": ["metalwork", "custom", "garage", "static-site"],
+  "keywords": ["custom", "garage", "static-site"],
   "author": "GarageForge",
   "license": "MIT",
   "devDependencies": {
