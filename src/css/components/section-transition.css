@@ -1,0 +1,46 @@
+/**
+ * Section Transition Component
+ * SVG-based decorative transition between page sections
+ */
+
+/* ==========================================================================
+   SECTION TRANSITION
+   ========================================================================== */
+
+.section-transition {
+    position: relative;
+    width: 100%;
+    height: var(--section-transition-height);
+    margin-top: -50px; /* Overlap with hero section */
+    margin-bottom: -60px; /* Overlap with section after the hero section */
+    z-index: 3;
+    pointer-events: none;
+}
+
+.section-transition__svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    .section-transition {
+        height: 80px;
+        margin-top: -40px;
+        margin-bottom: -40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .section-transition {
+        height: var(--section-transition-height-mobile);
+        margin-top: -30px;
+        margin-bottom: -30px;
+    }
+}

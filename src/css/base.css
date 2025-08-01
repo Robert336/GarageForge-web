@@ -7,6 +7,10 @@
 /* Root variables for colors, fonts, spacing will be defined here */
 
 :root {
+    /* ==========================================================================
+       DESIGN TOKENS SYSTEM
+       ========================================================================== */
+    
     /* Colors from BUSINESS.md */
     --color-dark-text: #000000;
     --color-primary-orange: #FF9500;
@@ -14,11 +18,122 @@
     --color-dark-neutral: #323232;
     --color-accent: #4CF07D;
     
+    /* Missing colors that were referenced in the codebase */
+    --color-text-muted: #6c757d;
+    --color-light-text: #6c757d;
+    --color-primary-blue: #3A72FF; /* Alias for consistency */
+    --color-primary: #3A72FF; /* Generic primary color */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    
+    /* Surface colors */
+    --color-surface-light: #f8f9fa;
+    --color-surface-white: #ffffff;
+    --color-surface-dark: #1a1a1a;
+    --color-surface-medium: #2d2d2d;
+    
     /* Typography */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Montserrat', sans-serif;
     
-    /* Spacing, breakpoints, and other design tokens to be added */
+    /* Typography Scale */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+    --text-5xl: 3rem;        /* 48px */
+    
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.6;
+    
+    /* Spacing Scale */
+    --spacing-xs: 0.25rem;   /* 4px */
+    --spacing-sm: 0.5rem;    /* 8px */
+    --spacing-md: 1rem;      /* 16px */
+    --spacing-lg: 1.5rem;    /* 24px */
+    --spacing-xl: 2rem;      /* 32px */
+    --spacing-2xl: 3rem;     /* 48px */
+    --spacing-3xl: 4rem;     /* 64px */
+    --spacing-4xl: 6rem;     /* 96px */
+    
+    /* Component Spacing */
+    --container-padding: 1.25rem; /* 20px */
+    --section-padding: var(--spacing-3xl);
+    --card-padding: var(--spacing-xl);
+    
+    /* Layout */
+    --container-max-width: 1200px;
+    --container-wide-max-width: 1400px;
+    --container-narrow-max-width: 800px;
+    
+    /* Component Dimensions */
+    --header-height: 80px;
+    --header-height-mobile: 70px;
+    --logo-height: 50px;
+    --logo-height-mobile: 40px;
+    --corner-decoration-size: 150px;
+    --corner-decoration-size-mobile: 100px;
+    --section-transition-height: 109px;
+    --section-transition-height-mobile: 60px;
+    
+    /* Borders */
+    --border-radius-sm: 6px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-width-thin: 1px;
+    --border-width-medium: 2px;
+    --border-width-thick: 3px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    --gradient-hero-overlay: linear-gradient(
+        135deg,
+        rgba(255, 106, 0, 0.7) 0%,
+        rgba(255, 106, 0, 0.5) 30%,
+        rgba(26, 26, 26, 0.6) 70%,
+        rgba(26, 26, 26, 0.8) 100%
+    );
+    --gradient-surface-subtle: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Z-Index Scale */
+    --z-index-dropdown: 10;
+    --z-index-sticky: 20;
+    --z-index-fixed: 30;
+    --z-index-modal-backdrop: 40;
+    --z-index-modal: 50;
+    --z-index-popover: 60;
+    --z-index-tooltip: 70;
+    
+    /* Breakpoints (for reference in media queries) */
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1200px;
 } 
 
 /* CSS Reset and base styles will go here */
@@ -64,4 +179,172 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+
+/* Spacing Utilities */
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+.p-2xl { padding: var(--spacing-2xl); }
+.p-3xl { padding: var(--spacing-3xl); }
+
+.px-xs { padding-left: var(--spacing-xs); padding-right: var(--spacing-xs); }
+.px-sm { padding-left: var(--spacing-sm); padding-right: var(--spacing-sm); }
+.px-md { padding-left: var(--spacing-md); padding-right: var(--spacing-md); }
+.px-lg { padding-left: var(--spacing-lg); padding-right: var(--spacing-lg); }
+.px-xl { padding-left: var(--spacing-xl); padding-right: var(--spacing-xl); }
+
+.py-xs { padding-top: var(--spacing-xs); padding-bottom: var(--spacing-xs); }
+.py-sm { padding-top: var(--spacing-sm); padding-bottom: var(--spacing-sm); }
+.py-md { padding-top: var(--spacing-md); padding-bottom: var(--spacing-md); }
+.py-lg { padding-top: var(--spacing-lg); padding-bottom: var(--spacing-lg); }
+.py-xl { padding-top: var(--spacing-xl); padding-bottom: var(--spacing-xl); }
+
+.m-xs { margin: var(--spacing-xs); }
+.m-sm { margin: var(--spacing-sm); }
+.m-md { margin: var(--spacing-md); }
+.m-lg { margin: var(--spacing-lg); }
+.m-xl { margin: var(--spacing-xl); }
+.m-2xl { margin: var(--spacing-2xl); }
+.m-3xl { margin: var(--spacing-3xl); }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+.mb-2xl { margin-bottom: var(--spacing-2xl); }
+
+/* Background Utilities */
+.bg-white { background-color: var(--color-white); }
+.bg-surface-light { background-color: var(--color-surface-light); }
+.bg-primary { background-color: var(--color-secondary-blue); }
+.bg-primary-orange { background-color: var(--color-primary-orange); }
+
+/* Text Utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+.text-muted { color: var(--color-text-muted); }
+.text-dark { color: var(--color-dark-text); }
+
+/* Border Utilities */
+.border { border: var(--border-width-thin) solid; }
+.border-2 { border: var(--border-width-medium) solid; }
+.border-3 { border: var(--border-width-thick) solid; }
+.border-primary { border-color: var(--color-secondary-blue); }
+.border-orange { border-color: var(--color-primary-orange); }
+
+.rounded { border-radius: var(--border-radius-md); }
+.rounded-sm { border-radius: var(--border-radius-sm); }
+.rounded-lg { border-radius: var(--border-radius-lg); }
+.rounded-full { border-radius: 50%; }
+
+/* Shadow Utilities */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-card { box-shadow: var(--shadow-card); }
+
+/* Transition Utilities */
+.transition { transition: var(--transition-normal); }
+.transition-fast { transition: var(--transition-fast); }
+.transition-slow { transition: var(--transition-slow); }
+
+/* Display Utilities */
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.hidden { display: none; }
+
+/* Flex Utilities */
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-1 { flex: 1; }
+
+/* Position Utilities */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+/* Common Layout Patterns */
+.full-width { width: 100%; }
+.full-height { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+.max-w-container { max-width: var(--container-max-width); }
+.max-w-wide { max-width: var(--container-wide-max-width); }
+.max-w-narrow { max-width: var(--container-narrow-max-width); }
+
+/* ==========================================================================
+   RESPONSIVE UTILITIES
+   ========================================================================== */
+
+/* Show/Hide utilities */
+.sm\:hidden { display: none; }
+.md\:hidden { display: none; }
+.lg\:hidden { display: none; }
+
+@media (min-width: 480px) {
+    .sm\:block { display: block; }
+    .sm\:flex { display: flex; }
+    .sm\:hidden { display: none; }
+}
+
+@media (min-width: 768px) {
+    .md\:block { display: block; }
+    .md\:flex { display: flex; }
+    .md\:hidden { display: none; }
+    .md\:grid { display: grid; }
+}
+
+@media (min-width: 1024px) {
+    .lg\:block { display: block; }
+    .lg\:flex { display: flex; }
+    .lg\:hidden { display: none; }
+    .lg\:grid { display: grid; }
+}
+
+/* Spacing responsive utilities */
+@media (min-width: 768px) {
+    .md\:p-lg { padding: var(--spacing-lg); }
+    .md\:px-xl { padding-left: var(--spacing-xl); padding-right: var(--spacing-xl); }
+    .md\:py-xl { padding-top: var(--spacing-xl); padding-bottom: var(--spacing-xl); }
+}
+
+@media (min-width: 1024px) {
+    .lg\:p-xl { padding: var(--spacing-xl); }
+    .lg\:px-2xl { padding-left: var(--spacing-2xl); padding-right: var(--spacing-2xl); }
+    .lg\:py-2xl { padding-top: var(--spacing-2xl); padding-bottom: var(--spacing-2xl); }
 }
