@@ -357,6 +357,7 @@
     .section-transition {
         height: 80px;
         margin-top: -40px;
+        margin-bottom: -40px;
     }
 }
 
@@ -364,6 +365,7 @@
     .section-transition {
         height: 60px;
         margin-top: -30px;
+        margin-bottom: -30px;
     }
 }
 
