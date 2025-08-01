@@ -1,0 +1,13 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#f8f9fa"/>
+  <rect x="50" y="50" width="500" height="300" fill="#e9ecef" stroke="#dee2e6" stroke-width="2"/>
+  <text x="300" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#6c757d">BB Bearing System</text>
+  <circle cx="280" cy="220" r="4" fill="#3a72ff"/>
+  <circle cx="295" cy="215" r="4" fill="#3a72ff"/>
+  <circle cx="310" cy="225" r="4" fill="#3a72ff"/>
+  <circle cx="290" cy="235" r="4" fill="#3a72ff"/>
+  <circle cx="305" cy="240" r="4" fill="#3a72ff"/>
+  <circle cx="320" cy="235" r="4" fill="#3a72ff"/>
+  <text x="300" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">Airsoft BBs as smooth bearings</text>
+  <text x="300" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">Low-friction rotation system</text>
+</svg>
