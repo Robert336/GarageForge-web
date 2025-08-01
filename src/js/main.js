@@ -266,15 +266,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 250);
     });
     
-    // Project Gallery Functionality
-    const gallery = document.querySelector('.project-gallery');
-    if (gallery) {
+    // Project Gallery Functionality - Support for multiple galleries
+    function initializeGallery(gallery) {
         const mainImage = gallery.querySelector('.project-gallery__main-image');
         const thumbnails = gallery.querySelectorAll('.project-gallery__thumbnail');
         
+        if (!mainImage || thumbnails.length === 0) return;
+        
         thumbnails.forEach(thumbnail => {
             thumbnail.addEventListener('click', function() {
-                // Remove active class from all thumbnails
+                // Remove active class from all thumbnails in this gallery
                 thumbnails.forEach(t => t.classList.remove('project-gallery__thumbnail--active'));
                 
                 // Add active class to clicked thumbnail
@@ -299,6 +300,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+    // Initialize all galleries on the page
+    const galleries = document.querySelectorAll('.project-gallery');
+    galleries.forEach(gallery => {
+        initializeGallery(gallery);
+    });
     
     // Function to update featured project content
     function updateFeaturedProject(projectId) {
