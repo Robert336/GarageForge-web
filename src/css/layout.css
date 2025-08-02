@@ -195,3 +195,29 @@
 .container--narrow {
     max-width: var(--container-narrow-max-width);
 } 
+
+.footer {
+    background-color: var(--color-dark-neutral);
+    color: var(--color-white);
+    padding: var(--spacing-2xl) 0;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
