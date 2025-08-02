@@ -17,10 +17,12 @@
 .services-overview__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
+    gap: var(--spacing-xs);
     max-width: 600px;
     margin: 0 auto;
     border: var(--border-width-thick) solid var(--color-secondary-blue);
+    
+    grid-auto-rows: 1fr;
 }
 
 .service-feature {
@@ -30,6 +32,11 @@
     padding: var(--spacing-lg) var(--spacing-md);
     text-align: center;
     transition: background-color var(--transition-normal);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px; /* Adjust this value as needed */
 }
 
 .service-feature:nth-child(2) {
