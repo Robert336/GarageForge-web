@@ -2,21 +2,6 @@
 
 This document outlines the CSS architecture and conventions used in the GarageForge website.
 
-## File Structure
-
-```
-src/css/
-├── base.css              # CSS reset, design tokens, utility classes
-├── layout.css            # Header, navigation, container utilities
-├── pages/
-│   └── home.css         # Page-specific imports and styles
-└── components/
-    ├── hero.css         # Hero section with video background
-    ├── section-transition.css  # SVG section transitions
-    ├── projects.css     # Project gallery and cards
-    └── services.css     # Services grid and how-it-works steps
-```
-
 ## Design Token System
 
 All design tokens are centralized in `base.css` under the `:root` selector:
@@ -99,26 +84,6 @@ All responsive design follows mobile-first principles:
 /* Desktop and up */
 @media (min-width: 1024px) { }
 ```
-
-## Performance Optimizations
-
-### CSS Custom Properties
-Repeated values are stored as CSS custom properties to:
-- Reduce bundle size
-- Enable easy theming
-- Maintain consistency
-
-### Consolidated Media Queries
-Media queries are consolidated within each component to:
-- Reduce duplicate code
-- Improve maintainability
-- Better organization
-
-### Utility-First Patterns
-Common patterns are extracted to utility classes to:
-- Reduce CSS bloat
-- Speed up development
-- Ensure consistency
 
 ## Breakpoint System
 
@@ -223,11 +188,3 @@ Leverage utility classes for frequently used patterns:
 3. Prefer utility classes over custom CSS
 4. Minimize selector specificity
 5. Remove unused CSS regularly
-
-## Browser Support
-
-The CSS architecture supports:
-- Modern browsers with CSS custom properties support
-- Mobile-first responsive design
-- Progressive enhancement patterns
-- Graceful degradation for older browsers
