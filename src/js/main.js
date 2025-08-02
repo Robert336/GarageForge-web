@@ -416,4 +416,59 @@ document.addEventListener('DOMContentLoaded', function() {
         card.setAttribute('role', 'button');
         card.setAttribute('aria-label', `View ${card.querySelector('.project-card__title').textContent} in featured section`);
     });
-}); 
+
+    // ==========================================================================
+    // FAQ ACCORDION FUNCTIONALITY
+    // ==========================================================================
+    
+    // Initialize FAQ accordion
+    const faqItems = document.querySelectorAll('.faq__item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq__question');
+        const answer = item.querySelector('.faq__answer');
+        
+        if (question && answer) {
+            question.addEventListener('click', () => {
+                toggleFaqItem(item, question, answer);
+            });
+            
+            // Add keyboard support
+            question.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleFaqItem(item, question, answer);
+                }
+            });
+        }
+    });
+    
+    function toggleFaqItem(item, question, answer) {
+        const isExpanded = question.getAttribute('aria-expanded') === 'true';
+        
+        // Close all other FAQ items
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+                const otherQuestion = otherItem.querySelector('.faq__question');
+                const otherAnswer = otherItem.querySelector('.faq__answer');
+                
+                if (otherQuestion && otherAnswer) {
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    otherAnswer.setAttribute('aria-hidden', 'true');
+                    otherItem.removeAttribute('data-expanded');
+                }
+            }
+        });
+        
+        // Toggle current item
+        if (isExpanded) {
+            question.setAttribute('aria-expanded', 'false');
+            answer.setAttribute('aria-hidden', 'true');
+            item.removeAttribute('data-expanded');
+        } else {
+            question.setAttribute('aria-expanded', 'true');
+            answer.setAttribute('aria-hidden', 'false');
+            item.setAttribute('data-expanded', 'true');
+        }
+    }
+});
