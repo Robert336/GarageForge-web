@@ -119,14 +119,14 @@
 }
 
 .step-card__icon {
-    margin: var(--spacing-md) 0 var(--spacing-lg);
+    margin: var(--spacing-md) 0 var(--spacing-sm);
     display: flex;
     justify-content: center;
 }
 
 .step-card__icon-img {
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
@@ -213,8 +213,8 @@
     }
     
     .step-card__icon-img {
-        width: 60px;
-        height: 60px;
+        width: 200px;
+        height: 200px;
     }
     
     .step-card__title {
@@ -248,8 +248,8 @@
     }
     
     .step-card__icon-img {
-        width: 50px;
-        height: 50px;
+        width: 200px;
+        height: 200px;
     }
     
     .step-card__title {
