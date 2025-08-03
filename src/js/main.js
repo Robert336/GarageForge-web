@@ -10,17 +10,17 @@ const projectData = {
         description: 'We built a simple rotating platform that lets someone aim their bedroom fan with just a remote control. Our client needed a way to redirect airflow without getting up due to accessibility reasons, so we designed a custom circular base, set up the motor system, and wired everything together. The clever part? We used airsoft BBs as smooth bearings to make it spin effortlessly. It\'s a small device that makes a big difference in daily comfort.',
         gallery: [
             {
-                src: './assets/images/projects/fan-turntable/main.jpg',
+                src: './assets/images/projects/fan-turntable/turntable_photo_with_fans.webp',
                 alt: 'Remote-Controlled Fan Turntable - Main View',
                 title: 'Main view'
             },
             {
-                src: './assets/images/projects/fan-turntable/detail1.jpg',
+                src: './assets/images/projects/fan-turntable/turntable_insides.webp',
                 alt: 'Remote-Controlled Fan Turntable - Motor Detail',
                 title: 'Motor detail'
             },
             {
-                src: './assets/images/projects/fan-turntable/detail2.jpg',
+                src: './assets/images/projects/fan-turntable/turntable_demo_clonetrooper.webp',
                 alt: 'Remote-Controlled Fan Turntable - Remote Control',
                 title: 'Remote control'
             },
@@ -91,27 +91,6 @@ const projectData = {
                 src: './assets/images/projects/custom-signage-3.jpg',
                 alt: 'Outdoor Business Signs - Installation',
                 title: 'Storefront installation'
-            }
-        ]
-    },
-    'signage-4': {
-        title: 'Event Branding Elements',
-        description: 'Temporary displays and branding elements for trade shows, conferences, and special events. These lightweight yet professional 3D printed elements help create memorable brand experiences. Easy to transport, set up, and customize for different events.',
-        gallery: [
-            {
-                src: './assets/images/projects/custom-signage-4.jpg',
-                alt: 'Event Branding Elements - Main View',
-                title: 'Main view'
-            },
-            {
-                src: './assets/images/projects/custom-signage-4.jpg',
-                alt: 'Event Branding Elements - Setup',
-                title: 'Event setup'
-            },
-            {
-                src: './assets/images/projects/custom-signage-4.jpg',
-                alt: 'Event Branding Elements - Display',
-                title: 'Trade show display'
             }
         ]
     }
