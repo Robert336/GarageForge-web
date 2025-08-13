@@ -424,12 +424,14 @@
                     <p class="cta__description">
                         Send us your email and we'll reach out to learn more about what you're building and how we can help.
                     </p>
-                    <form class="cta__form" aria-label="Email subscription form">
+                    <form class="cta__form" aria-label="Email subscription form" data-endpoint="https://script.google.com/macros/s/AKfycby2H8Imxuy2K3t5cp4fDd5VQl3bQWtT08PIdXf8ja6rFCY4TxJ1gEefDhWv4v3TImttUA/exec">
                         <div class="cta__input-wrapper">
                             <input 
                                 type="email" 
                                 class="cta__input" 
                                 placeholder="Enter your email address"
+                                name="email"
+                                autocomplete="email"
                                 aria-label="Email address"
                                 required
                             >
