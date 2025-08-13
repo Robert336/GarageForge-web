@@ -303,6 +303,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = ctaInput.value.trim();
             if (!email) return;
 
+            // Check if the email is in a valid format (simple regex)
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                if (footerText) {
+                    footerText.textContent = 'Please enter a valid email address.';
+                    footerText.style.color = 'red';
+                }
+                if (ctaButton) {
+                    ctaButton.disabled = false;
+                    ctaButton.textContent = originalButtonText;
+                }
+                return;
+            }
+
             // Basic disable and feedback
             const originalButtonText = ctaButton ? ctaButton.textContent : '';
             if (ctaButton) {
