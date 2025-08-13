@@ -286,6 +286,102 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeGallery(gallery);
     });
     
+    // ==========================================================================
+    // CTA FORM: Submit email to Google Apps Script endpoint
+    // ==========================================================================
+    const ctaForm = document.querySelector('.cta__form');
+    if (ctaForm) {
+        const ctaInput = ctaForm.querySelector('.cta__input');
+        const ctaButton = ctaForm.querySelector('.cta__button');
+        const footerText = ctaForm.querySelector('.cta__footer-text');
+        const endpoint = ctaForm.getAttribute('data-endpoint') || '';
+
+        ctaForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            if (!ctaInput) return;
+
+            const email = ctaInput.value.trim();
+            if (!email) return;
+
+            // Basic disable and feedback
+            const originalButtonText = ctaButton ? ctaButton.textContent : '';
+            if (ctaButton) {
+                ctaButton.disabled = true;
+                ctaButton.textContent = 'Sending…';
+            }
+
+            // Prepare payload
+            const timestampIso = new Date().toISOString();
+            const payload = { email, timestamp: timestampIso };
+
+            // Prefer JSON POST. If endpoint is empty, just simulate success UI.
+            let succeeded = false;
+            try {
+                if (endpoint) {
+                    // For Google Apps Script, enable one of the following:
+                    // - JSON endpoint in doPost(e) parsing JSON body
+                    // - or accept form-urlencoded below
+
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(payload),
+                        // If your GAS is deployed without CORS, you may need no-cors mode.
+                        // mode: 'no-cors',
+                    });
+
+                    // In no-cors, response.ok is always false/opaque. We treat as success optimistically.
+                    if (response.type === 'opaque') {
+                        succeeded = true;
+                    } else {
+                        succeeded = response.ok;
+                    }
+                } else {
+                    // No endpoint configured; do not send, but show success for UX during dev
+                    succeeded = true;
+                }
+            } catch (err) {
+                // Retry once using form-url-encoded as a fallback (often easier for GAS)
+                try {
+                    if (endpoint) {
+                        const formData = new URLSearchParams();
+                        formData.set('email', email);
+                        formData.set('timestamp', timestampIso);
+                        const resp2 = await fetch(endpoint, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: formData.toString(),
+                            // mode: 'no-cors',
+                        });
+                        succeeded = resp2.type === 'opaque' ? true : resp2.ok;
+                    }
+                } catch (e2) {
+                    succeeded = false;
+                }
+            }
+
+            // UI feedback
+            if (succeeded) {
+                if (ctaButton) ctaButton.textContent = 'Sent!';
+                if (footerText) footerText.textContent = 'Thanks! We\'ll be in touch shortly.';
+                ctaInput.value = '';
+            } else {
+                if (ctaButton) ctaButton.textContent = 'Try again';
+                if (footerText) footerText.textContent = 'Something went wrong. Please email us directly.';
+            }
+
+            // Re-enable button after a short delay for UX
+            setTimeout(() => {
+                if (ctaButton) {
+                    ctaButton.disabled = false;
+                    ctaButton.textContent = originalButtonText || 'Get a Quote';
+                }
+            }, 2500);
+        });
+    }
+
     // Function to update featured project content
     function updateFeaturedProject(projectId) {
         const project = projectData[projectId];
