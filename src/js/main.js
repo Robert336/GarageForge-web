@@ -30,69 +30,6 @@ const projectData = {
                 title: 'BB bearing system'
             }
         ]
-    },
-    'signage-1': {
-        title: 'Modern Office Signage',
-        description: 'Professional dimensional letters designed for corporate environments. These custom 3D printed letters provide a sleek, modern aesthetic for office branding while maintaining durability and professional appearance. Each letter is precisely crafted to company specifications and mounting requirements.',
-        gallery: [
-            {
-                src: './assets/images/projects/custom-signage-1.jpg',
-                alt: 'Modern Office Signage - Main View',
-                title: 'Main view'
-            },
-            {
-                src: './assets/images/projects/custom-signage-1.jpg',
-                alt: 'Modern Office Signage - Detail',
-                title: 'Letter detail'
-            },
-            {
-                src: './assets/images/projects/custom-signage-1.jpg',
-                alt: 'Modern Office Signage - Installation',
-                title: 'Installation view'
-            }
-        ]
-    },
-    'signage-2': {
-        title: 'Decorative Wall Letters',
-        description: 'Custom typography solutions for interior design projects. These decorative 3D printed letters add personality and branding to residential and commercial spaces. Available in various sizes, fonts, and finishes to match any design aesthetic.',
-        gallery: [
-            {
-                src: './assets/images/projects/custom-signage-2.jpg',
-                alt: 'Decorative Wall Letters - Main View',
-                title: 'Main view'
-            },
-            {
-                src: './assets/images/projects/custom-signage-2.jpg',
-                alt: 'Decorative Wall Letters - Close-up',
-                title: 'Letter detail'
-            },
-            {
-                src: './assets/images/projects/custom-signage-2.jpg',
-                alt: 'Decorative Wall Letters - Mounted',
-                title: 'Wall mounted'
-            }
-        ]
-    },
-    'signage-3': {
-        title: 'Outdoor Business Signs',
-        description: 'Weather-resistant signage solutions for storefronts and outdoor applications. These durable 3D printed signs are designed to withstand the elements while maintaining their appearance. Perfect for business identification and wayfinding applications.',
-        gallery: [
-            {
-                src: './assets/images/projects/custom-signage-3.jpg',
-                alt: 'Outdoor Business Signs - Main View',
-                title: 'Main view'
-            },
-            {
-                src: './assets/images/projects/custom-signage-3.jpg',
-                alt: 'Outdoor Business Signs - Weather Detail',
-                title: 'Weather resistant'
-            },
-            {
-                src: './assets/images/projects/custom-signage-3.jpg',
-                alt: 'Outdoor Business Signs - Installation',
-                title: 'Storefront installation'
-            }
-        ]
     }
 };
 
