@@ -1,0 +1,11 @@
+/**
+ * GarageForge Cosplay Page Styles
+ * Page-specific styles for the cosplay page
+ */
+
+/* ==========================================================================
+   COMPONENT IMPORTS
+   ========================================================================== */
+
+@import '../components/services.css';
+@import '../components/cta.css';
