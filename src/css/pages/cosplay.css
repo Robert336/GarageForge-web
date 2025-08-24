@@ -23,6 +23,8 @@ body {
    ========================================================================== */
 
 .cosplay-hero {
+    /* Add extra space at the top to clear the nav/header */
+    margin-top: calc(var(--header-height));
     padding: var(--spacing-3xl) var(--spacing-lg);
     background: var(--color-dark-neutral);
     min-height: 100vh;
